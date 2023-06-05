@@ -4,6 +4,8 @@ include:
     file: chef/cookbook.gitlab-ci.yml
 
 verify:
+  after_script:
+    - env
   parallel:
     matrix:
       - SUITE: default
