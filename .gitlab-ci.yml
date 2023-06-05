@@ -9,7 +9,9 @@ verify:
   parallel:
     matrix:
       - SUITE: default
-        PLATFORM: debian-11
+        PLATFORM:
+          - debian-10
+          - debian-11
         CHEF_VERSION:
           - 14
           - 15
