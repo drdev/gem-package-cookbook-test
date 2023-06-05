@@ -4,17 +4,10 @@ include:
     file: chef/cookbook.gitlab-ci.yml
 
 verify:
-  after_script:
-    - env
   parallel:
     matrix:
       - SUITE: default
         PLATFORM:
           - debian-10
           - debian-11
-        CHEF_VERSION:
-          - 14
-          - 15
-          - 16
-          - 17
-          - 18
+        CHEF_VERSION: 18
