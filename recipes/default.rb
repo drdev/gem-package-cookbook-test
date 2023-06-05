@@ -1,5 +1,5 @@
-#
-# Cookbook:: test
-# Recipe:: default
-#
-# Copyright:: 2023, The Authors, All Rights Reserved.
+# Make sure gem is available in the system
+package 'ruby'
+
+# Install example gem into the system
+gem_package 'hello-world'
