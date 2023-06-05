@@ -1,0 +1,16 @@
+include:
+  - template: 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml'
+  - project: devops/gitlab-ci
+    file: chef/cookbook.gitlab-ci.yml
+
+verify:
+  parallel:
+    matrix:
+      - SUITE: default
+        PLATFORM: debian-11
+        CHEF_VERSION:
+          - 14
+          - 15
+          - 16
+          - 17
+          - 18
