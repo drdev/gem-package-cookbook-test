@@ -18,14 +18,18 @@ platforms:
   - name: debian-10
     driver:
       image: dokken/debian-10
-      # pid_one_command: /bin/systemd
       intermediate_instructions:
         - RUN /usr/bin/apt-get update
 
   - name: debian-11
     driver:
       image: dokken/debian-11
-      # pid_one_command: /bin/systemd
+      intermediate_instructions:
+        - RUN /usr/bin/apt-get update
+
+  - name: debian-12
+    driver:
+      image: dokken/debian-12
       intermediate_instructions:
         - RUN /usr/bin/apt-get update
 
